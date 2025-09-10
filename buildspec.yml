@@ -3,8 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      dotnet: 8       # بدّلها 6/7 لو مشروعك على نسخة أقدم
+      nodejs: 18
+      dotnet: 8.0
     commands:
+      - dotnet tool install --global dotnet-ef
+      - export PATH="$PATH:$HOME/.dotnet/tools"
+  pre_build:
       - dotnet --info
   build:
     commands:
