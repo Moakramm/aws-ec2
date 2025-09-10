@@ -1,6 +1,6 @@
 version: 0.1
 files:
-  - source: /
+  - source: publish/
     destination: /var/www/helloweb/
 scripts:
   BeforeDeploy:
