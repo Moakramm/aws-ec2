@@ -8,7 +8,6 @@ phases:
     commands:
       - dotnet tool install --global dotnet-ef
       - export PATH="$PATH:$HOME/.dotnet/tools"
-  pre_build:
       - dotnet --info
   build:
     commands:
