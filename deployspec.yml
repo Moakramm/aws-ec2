@@ -4,10 +4,10 @@ files:
     destination: /var/www/helloweb/
 scripts:
   BeforeDeploy:
-    - location: scripts/stop.sh
+    - location: aws-ec2/scripts/stop.sh
       timeout: 120
       runas: root
   AfterDeploy:
-    - location: scripts/restart.sh
+    - location: aws-ec2/scripts/restart.sh
       timeout: 180
       runas: root
