@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8       # بدّلها 6/7 لو مشروعك على نسخة أقدم
+    commands:
+      - dotnet --info
+  build:
+    commands:
+      - dotnet restore
+      - dotnet publish -c Release -o publish
+artifacts:
+  base-directory: publish
+  files:
+    - '**/*'
