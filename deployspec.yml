@@ -1,0 +1,13 @@
+version: 0.1
+files:
+  - source: /
+    destination: /var/www/helloweb/
+scripts:
+  BeforeDeploy:
+    - location: scripts/stop.sh
+      timeout: 120
+      runas: root
+  AfterDeploy:
+    - location: scripts/restart.sh
+      timeout: 180
+      runas: root
