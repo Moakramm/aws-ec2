@@ -11,7 +11,8 @@ phases:
       - dotnet --info
   build:
     commands:
-      - dotnet publish -c Release -o publish
+      - dotnet restore ./src/AwsEc2/AwsEc2.csproj 
+      - dotnet publish ./src/AwsEc2/AwsEc2.csproj  -c Release -o ./publish
 artifacts:
   base-directory: publish
   files:
