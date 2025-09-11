@@ -1,7 +1,7 @@
 version: 0.1
 files:
   - source: publish/
-    destination: /var/www/helloweb/
+    destination: /var/app/current/
 scripts:
   BeforeDeploy:
     - location: aws-ec2/scripts/stop.sh
